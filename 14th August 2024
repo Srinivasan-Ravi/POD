@@ -1,0 +1,59 @@
+1) Printing Array in reverse
+
+2)Queue Problem
+
+// You are using Java
+import java.util.*;
+class Main
+{
+    public static void main(String [] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        Queue<Integer> q = new LinkedList();
+        int n;
+        
+        while((n=sc.nextInt())!=4)
+        {
+            if(n==1)
+            {
+                if(q.size()==10)
+                {
+                    System.out.println("Queue Overflow");
+                }
+                else
+                {
+                    q.add(sc.nextInt());
+                }
+            }
+            else if(n==2)
+            {
+                if(q.size()==0)
+                {
+                    System.out.println("Queue Underflow");
+                }
+                else
+                {
+                    System.out.println("Element deleted from queue is: " + q.poll());
+                }
+            }
+            else if(n==3)
+            {
+                if(q.size()==0)
+                System.out.println("Queue is empty");
+                else
+                {
+                System.out.println("Queue elements:");
+                for(var i: q)
+                {
+                    System.out.print(i + " ");
+                }
+                }
+            }
+            else
+            {
+                System.out.println("Wrong choice");
+            }
+        }
+    }
+}
